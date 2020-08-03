@@ -11,14 +11,14 @@ class Count extends React.Component {
         this.setState((prevState) =>({
             value: prevState.value - 1
         }))
-
+        this.props.handleDecrease();
     }
 
     onIncrease = ()=>{
         this.setState((prevState) =>({
             value: prevState.value + 1
         }))
-
+        this.props.handleIncrease();
     }
 
     render() {
