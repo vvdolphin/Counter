@@ -3,7 +3,6 @@ import React from 'react'
 import store from '../../redux/store/configStore';
 import {increaseCount} from "../../redux/action/count"
 import {decreaseCount} from "../../redux/action/count"
-// import {getCount} from "../../redux/action/index"
 
 class Count extends React.Component {
     constructor(props){
@@ -11,11 +10,10 @@ class Count extends React.Component {
         this.state ={value:0}
     }
 
-
    static getDerivedStateFromProps(props, state){
         if(props.count !== state.count){
             state.value =0;
-            state.count = props.count;    
+            // state.count = props.count;    
         }
         return null;
     }

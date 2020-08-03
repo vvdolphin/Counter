@@ -10,8 +10,6 @@ function App() {
       <CounterGroup />
     </header>
   </div>
-
  )
 }
-
 export default App;
