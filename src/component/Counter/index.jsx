@@ -1,10 +1,14 @@
 
 import React from 'react'
+import store from '../../redux/store/configStore';
+import {increaseCount} from "../../redux/action/count"
+import {decreaseCount} from "../../redux/action/count"
+// import {getCount} from "../../redux/action/index"
 
 class Count extends React.Component {
     constructor(props){
         super(props);
-        this.state = {value:0,count:0};
+        this.state ={value:0}
     }
 
 
@@ -20,14 +24,14 @@ class Count extends React.Component {
         this.setState((prevState) =>({
             value: prevState.value - 1
         }))
-        this.props.handleDecrease();
+        store.dispatch(decreaseCount());
     }
 
     onIncrease = ()=>{
         this.setState((prevState) =>({
             value: prevState.value + 1
         }))
-        this.props.handleIncrease();
+        store.dispatch(increaseCount());
     }
 
     render() {
