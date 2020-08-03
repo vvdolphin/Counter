@@ -7,7 +7,7 @@ import {decreaseCount} from "../../redux/action/count"
 class Count extends React.Component {
     constructor(props){
         super(props);
-        this.state ={value:0}
+        this.state ={value:0,count:0}
     }
 
    static getDerivedStateFromProps(props, state){
