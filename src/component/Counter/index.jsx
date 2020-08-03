@@ -4,7 +4,16 @@ import React from 'react'
 class Count extends React.Component {
     constructor(props){
         super(props);
-        this.state = {value:0};
+        this.state = {value:0,count:0};
+    }
+
+
+   static getDerivedStateFromProps(props, state){
+        if(props.count !== state.count){
+            state.value =0;
+            state.count = props.count;    
+        }
+        return null;
     }
 
     onDecrease = ()=>{
