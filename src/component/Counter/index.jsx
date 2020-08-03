@@ -13,7 +13,7 @@ class Count extends React.Component {
    static getDerivedStateFromProps(props, state){
         if(props.count !== state.count){
             state.value =0;
-            // state.count = props.count;    
+            state.count = props.count;    
         }
         return null;
     }
